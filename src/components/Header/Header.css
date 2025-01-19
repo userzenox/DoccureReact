@@ -1,0 +1,121 @@
+/* Header Styling */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7%;
+  width: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background-color: white;
+}
+
+.logo {
+  width: 150px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin: 1rem;
+  position: relative;
+  transition: 0.5s;
+}
+
+.navbar a:hover {
+  color: var(--maincolor);
+}
+
+.navbar a::after {
+  content: "";
+  background-color: var(--maincolor);
+  width: 0;
+  position: absolute;
+  height: 0.2rem;
+  left: 0;
+  margin-top: 0.5rem;
+  top: 100%;
+  transition: 0.5s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Right Icons (Hamburger Menu & Button) */
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right-icons .fa-bars,
+.right-icons .fa-times {
+  display: block; /* Default for smaller screens */
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Styling for Small Screens */
+@media (max-width: 1024px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+}
+
+/* Hide Hamburger Icon for Laptop View */
+@media (min-width: 1024px) {
+  .right-icons .fa-bars,
+  .right-icons .fa-times {
+    display: none !important; /* Ensure the icons are hidden */
+  }
+
+  /* Ensure Navbar is Always Visible */
+  .navbar {
+    display: flex !important;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+}
