@@ -1,7 +1,7 @@
 /* Main Home Section */
 .main-home {
     padding: 2rem 7%;
-    background: url(../images/blurbg1.jpg) center/cover no-repeat;
+    background: url(../images//back_ground.png) center/cover no-repeat;
     width: 100%;
     min-height: 100vh;
 }
@@ -14,6 +14,7 @@
     margin-top: 6rem;
     flex-wrap: wrap;
     gap: 2rem;
+    flex-direction: row-reverse
 }
 
 .home .home-left-content {
@@ -97,7 +98,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 3rem;
-    margin-top: -50px;
+    margin-top: 30px;
 }
 
 .inner-technology {

@@ -1,7 +1,7 @@
 import React from 'react';
  // Ensure the corresponding CSS file is included
 import heroImage from '../images/hero2.png'; // Update the path as necessary
-
+import './Home.css';
 function Home() {
   return (
     <div className="main-home">
