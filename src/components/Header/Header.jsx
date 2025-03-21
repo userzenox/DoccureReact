@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css'; // Make sure to create a corresponding CSS file for styling
 import logo3 from '../../images/logo3.png';
-import {Link} from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,20 +25,21 @@ function Header() {
         </div>
 
         <nav className={`navbar ${isMenuActive ? 'active' : ''}`}>
-          <Link to="/" onClick={handleSubMenuClick}>Home</Link>
-          <Link to="/about" onClick={handleSubMenuClick}>About</Link>
-          <Link to="/contact" onClick={handleSubMenuClick}>Contact</Link>
+          <NavLink exact to="/" onClick={handleSubMenuClick}>Home</NavLink>
+          <NavLink to="/about" onClick={handleSubMenuClick}>About</NavLink>
+          <NavLink to="/contact" onClick={handleSubMenuClick}>Contact</NavLink>
         </nav>
 
         <div className="right-icons">
-  {isMenuActive ? (
-    <FontAwesomeIcon icon={faTimes} onClick={handleMenuClick} />
-  ) : (
-    <FontAwesomeIcon icon={faBars} onClick={handleMenuClick} />
-  )}
-  <div className="btn">Make Appointment</div>
-</div>
-
+          {isMenuActive ? (
+            <FontAwesomeIcon icon={faTimes} onClick={handleMenuClick} />
+          ) : (
+            <FontAwesomeIcon icon={faBars} onClick={handleMenuClick} />
+          )}
+          <div className="btn"> 
+            <NavLink to="/appointment" onClick={handleSubMenuClick}>Appointment</NavLink>
+          </div>
+        </div>
       </header>
     </div>
   );

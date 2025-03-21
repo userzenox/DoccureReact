@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Home.css';
+// import './Home.css';
 import heroImage from '../images/hero2.png';
 import About from './About';
 import Popup from './Popup';

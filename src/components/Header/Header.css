@@ -82,6 +82,24 @@ header {
   cursor: pointer;
 }
 
+.header .btn a {
+  color: white; /* Ensure the text color is white */
+  text-decoration: none; /* Remove underline */
+}
+
+.header .btn a:hover {
+  background-color: var(--secondcolor); /* Change background color on hover */
+  color: white; /* Ensure text color stays white on hover */
+}
+
+.header .btn a.active {
+  color: white; /* Ensure text color stays white when active */
+}
+
+.header .btn a:visited {
+  color: white; /* Ensure text color stays white when visited */
+}
+
 /* Responsive Styling for Small Screens */
 @media (max-width: 1024px) {
   .navbar {

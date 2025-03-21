@@ -1,0 +1,110 @@
+/* Footer Styling */
+.main-footer {
+    padding: 3rem 5%;
+    background-color: var(--textcolor);
+    color: white;
+    text-align: center;
+}
+
+/* Footer Layout */
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+/* Footer Content */
+.footer-content {
+    flex: 1 1 220px;
+}
+
+.footer-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Footer Links */
+.link a, .footernav a {
+    display: block;
+    color: white;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    margin: 0.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.link a:hover, .footernav a:hover {
+    color: var(--maincolor);
+}
+
+/* Footer Navigation */
+.footernav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+/* Footer Rights */
+.footer-rights {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-footer {
+        padding: 2.5rem 5%;
+    }
+
+    .footer-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 1.5rem;
+        text-align: left;
+    }
+
+    .footernav {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .footer-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Responsive for Tablets & Mobile */
+@media (max-width: 768px) {
+    html {
+        font-size: 52%;
+    }
+
+    .main-footer {
+        padding: 2rem 4%;
+    }
+
+    .footer-inner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-content {
+        flex: 0 0 0px;
+    }
+
+    .footernav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footernav a {
+        font-size: 1.3rem;
+    }
+}
