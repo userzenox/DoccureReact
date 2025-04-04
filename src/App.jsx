@@ -4,7 +4,7 @@ import './App.css'
 
 import {Routes, Route} from 'react-router-dom'
 import Home from './Pages/Home.jsx'
-import About from './Pages/About.jsx'
+import Service from './Pages/Service/Service.jsx'
 import Contact from './Pages/Contact.jsx'
 import Appointment from './Pages/Appointment.jsx'
 import Footer from './components/Footer/Footer.jsx'
@@ -18,7 +18,7 @@ function App() {
      
      <Routes>
          <Route path='/' element={<Home />} />
-         <Route path='/about' element={<About />} />
+         <Route path='/Service' element={<Service />} />
          <Route path='/contact' element={<Contact />} />
          {/* <Route path='/Appoitment' element={<Appointment />} /> */}
      </Routes>
