@@ -8,6 +8,7 @@ import Service from './Pages/Service/Service.jsx'
 import Contact from './Pages/Contact.jsx'
 import Appointment from './Pages/Appointment.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import BmiCheck from './Pages/Service/links/BmiCheck.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
          <Route path='/' element={<Home />} />
          <Route path='/Service' element={<Service />} />
          <Route path='/contact' element={<Contact />} />
+         <Route path='/BmiCheck' element={<BmiCheck />} />
          {/* <Route path='/Appoitment' element={<Appointment />} /> */}
      </Routes>
 
