@@ -26,8 +26,8 @@ function Header() {
 
         <nav className={`navbar ${isMenuActive ? 'active' : ''}`}>
           <NavLink exact to="/" onClick={handleSubMenuClick}>Home</NavLink>
-          <NavLink to="/Service" onClick={handleSubMenuClick}>Service</NavLink>
-          <NavLink to="/contact" onClick={handleSubMenuClick}>Contact</NavLink>
+          <NavLink to="/Services" onClick={handleSubMenuClick}>Services</NavLink>
+          <NavLink to="/Doctor" onClick={handleSubMenuClick}>Contact</NavLink>
         </nav>
 
         <div className="right-icons">

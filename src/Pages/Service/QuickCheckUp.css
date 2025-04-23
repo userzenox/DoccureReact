@@ -1,0 +1,87 @@
+.our-quick-checkups {
+    width: 100%;
+    padding: 3rem 7%;
+    margin-top: 7rem;
+}
+
+.quickcheckup-cta {
+  margin-top: 1rem;
+  color: var(--maincolor);
+  font-size: 1.2rem;
+}
+
+.quickcheckup-heading h2 {
+    font-size: 40px;
+    color: #00bcd4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+}
+
+.main-checkups {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    text-align: center;
+}
+
+.inner-checkup {
+    flex: 1 1 300px;
+    padding: 3rem 2rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 2px solid var(--textcolor);
+    transition: 0.3s ease;
+
+    /* Prevent default anchor styling */
+    text-decoration: none;
+    color: inherit;
+}
+
+.inner-checkup:hover {
+    transform: translateY(-10px);
+    border-bottom: 2px solid var(--maincolor);
+    background-color: #f5f5f5;
+}
+
+.inner-checkup:hover .checkup-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+    background-color: var(--maincolor);
+}
+
+.inner-checkup:hover .checkup-icon i {
+    color: white;
+    transform: scale(1.1);
+}
+
+.checkup-icon {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid var(--maincolor);
+    background-color: #f5f5f5;
+    transition: 0.3s ease;
+}
+
+.checkup-icon i {
+    font-size: 3rem;
+    color: var(--maincolor);
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-checkup h3 {
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.inner-checkup p {
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    line-height: 2.5rem;
+}

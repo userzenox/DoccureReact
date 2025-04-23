@@ -18,7 +18,7 @@ const PatientForm = () => {
 
     if (bmi < 18.5) {
       bmiCategory = 'Underweight';
-      imageUrl = 'src/pages/service/images2/thin.png';
+      imageUrl = 'src\Pages\Service\images2\thin.png';
       precautions = 'Consider a balanced diet with more calories.';
     } else if (bmi >= 18.5 && bmi < 24.9) {
       bmiCategory = 'Normal weight';
@@ -41,9 +41,7 @@ const PatientForm = () => {
 
   return (
     <main className="main">
-      <h1 className="bmi-heading">BMI Check</h1>
-
-      <div className={`form-details-wrapper ${bmiData ? 'with-result' : ''}`}>
+      <div className="section">
         <form onSubmit={calculateBMI} className="form">
           <div>
             <label htmlFor="height">Height (cm):</label>
