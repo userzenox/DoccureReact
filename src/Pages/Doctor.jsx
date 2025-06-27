@@ -1,108 +1,54 @@
 import React from 'react';
-// import './App.css';  // Assuming your styles are in App.css or a similar file
+import './Doctor.css'; 
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const App = () => {
+import team1 from '../images/team1.jpg';
+import team2 from '../images/team2.jpg';
+import team3 from '../images/team3.jpg';
+import team4 from '../images/team4.jpg';
+import team5 from '../images/team5.jpg';
+import team6 from '../images/team6.jpg';
+
+
+const doctors = [
+  { name: "Dr. Joe", image: team1, linkedin: "#", instagram: "#" },
+  { name: "Dr. Lucifer", image: team2, linkedin: "#", instagram: "#" },
+  { name: "Dr. Smith", image: team3, linkedin: "#", instagram: "#" },
+  { name: "Dr. Emily", image: team4, linkedin: "#", instagram: "#" },
+  { name: "Dr. Brok", image: team5, linkedin: "#", instagram: "#" },
+  { name: "Dr. Allen", image: team6, linkedin: "#", instagram: "#" },
+  
+  
+];
+
+
+const Doctor = () => {
   return (
-    <div>
-      <header>
-        <div className="logo">
-          <img src="images/logo3.png" alt="Logo" />
-        </div>
-
-        <nav className="navbar">
-          <a href="./index.html">Home</a>
-          <a href="./service.html">Service</a>
-          <a href="./Patient.html">Patient</a>
-          <a href="./Doctors.html">Doctors</a>
-          <a href="./Contacts">Contact</a>
-        </nav>
-
-        <div className="right-icons">
-          <div id="menu-bars" className="fas fa-bars"></div>
-          <div className="btn">Make Appointment</div>
-        </div>
-      </header>
-
-      {/* Header section ended */}
-
-      {/* Our Doctors */}
-      <div className="main-doctors">
-        <div className="doctors-heading">
-          <h2>Our Doctors</h2>
-        </div>
-
-        <div className="main-inner-doctor">
-          {['team1', 'team2', 'team3', 'team4', 'team5', 'team6'].map((team, index) => (
-            <div className="doc-poster" key={index}>
-              <div className="doc-icons">
-                <i className="fa-solid fa-share"></i>
-                <i className="fa-solid fa-eye"></i>
-                <i className="fa-solid fa-heart"></i>
-              </div>
-              <img src={`images/${team}.jpg`} alt={`Doctor ${index + 1}`} />
-              <div className="doc-details">
-                <h2>Mr Joe</h2>
-                <i className="fa-brands fa-linkedin"></i>
-                <i className="fa-brands fa-instagram"></i>
-              </div>
-            </div>
-          ))}
-        </div>
+    <section className="main-doctors">
+      <div className="doctors-heading">
+        <h2>Our Doctors</h2>
       </div>
-      {/* Our Doctors Ended */}
 
-      {/* Footer section */}
-      <div className="main-footer">
-        <div className="footer-inner">
-          <div className="footer-content">
-            <div className="link">
-              <a href=""></a>
-              <a href="">
-                <div className="logo">
-                  <img src="images/logo3.png" alt="Logo" />
-                </div>
-              </a>
-              <a href=""></a>
-              <a href=""></a>
+      <div className="main-inner-doctor">
+        {doctors.map((doc, index) => (
+          <div className="doc-poster" key={index}>
+            <div className="doc-icons">
+              <i className="fa-solid fa-share"></i>
+              <i className="fa-solid fa-eye"></i>
+              <i className="fa-solid fa-heart"></i>
+            </div>
+          <img src={doc.image} alt={doc.name} />
+
+            <div className="doc-details">
+              <h2>{doc.name}</h2>
+              <a href={doc.linkedin}><i className="fa-brands fa-linkedin"></i></a>
+              <a href={doc.instagram}><i className="fa-brands fa-instagram"></i></a>
             </div>
           </div>
-
-          <div className="footer-content">
-            <div className="link">
-              <nav className="navbar">
-                {/* <a href="./index.html">Home</a> */}
-                <a href="./Doctors.html">Doctors</a>
-                <a href="./service.html">Service</a>
-                <a href="./Patient.html">Patient</a>
-                <a href="#Home">Contact</a>
-              </nav>
-            </div>
-          </div>
-
-          <div className="footer-content">
-            <h1>Contact US</h1>
-            <div className="link">
-              <a href="">Name: Hospital Management</a>
-              <a href="">Email: management@gmail.com</a>
-              <a href="">Phone: +123 456 7890</a>
-            </div>
-          </div>
-
-          <div className="footer-content">
-            <h1></h1>
-            <div className="link">
-              <a href=""></a>
-              <a href="">Privacy Policy</a>
-              <a href="">Terms and Conditions</a>
-              <a href=""></a>
-            </div>
-          </div>
-        </div>
-        <p>All rights are reserved by Kumar Piyush</p>
+        ))}
       </div>
-      {/* Footer section ends */}
-    </div>
+    </section>
   );
 };
 
-export default App;
+export default Doctor;

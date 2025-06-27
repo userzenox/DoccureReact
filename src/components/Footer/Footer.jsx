@@ -24,6 +24,7 @@ function Footer({ isMenuActive }) {
             <nav className={`footernav ${isMenuActive ? 'active' : ''}`}>
               <NavLink exact to="/">Home</NavLink>
               <NavLink to="/Service"> Service</NavLink>
+              <NavLink to="/Doctor"> Doctor</NavLink>
               <NavLink to="/contact">Contact</NavLink>
             </nav>
           </div>

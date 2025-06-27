@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Header.css'; // Make sure to create a corresponding CSS file for styling
+import './Header.css'; 
 import logo3 from '../../images/logo3.png';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,8 +13,8 @@ function Header() {
   };
 
   const handleSubMenuClick = (e) => {
-    e.stopPropagation(); // Prevent the click event from propagating to the parent element
-    setIsMenuActive(false); // Close the menu only when a submenu item is clicked
+    e.stopPropagation(); 
+    setIsMenuActive(false); 
   };
 
   return (
@@ -27,7 +27,8 @@ function Header() {
         <nav className={`navbar ${isMenuActive ? 'active' : ''}`}>
           <NavLink exact to="/" onClick={handleSubMenuClick}>Home</NavLink>
           <NavLink to="/Services" onClick={handleSubMenuClick}>Services</NavLink>
-          <NavLink to="/Doctor" onClick={handleSubMenuClick}>Contact</NavLink>
+          <NavLink to="/Doctor" onClick={handleSubMenuClick}> Doctors</NavLink>
+          <NavLink to="/Contact" onClick={handleSubMenuClick}> Contact</NavLink>
         </nav>
 
         <div className="right-icons">

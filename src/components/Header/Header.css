@@ -62,6 +62,7 @@ header {
 .right-icons {
   display: flex;
   align-items: center;
+  size: 10rem;
   gap: 20px;
 }
 
@@ -117,6 +118,20 @@ header {
   .navbar.active {
     display: flex;
   }
+  .right-icons {
+  display: flex;
+  align-items: center;
+  size: 10rem;
+  gap: 20px;
+}
+
+.right-icons .fa-bars,
+.right-icons .fa-times {
+  display: block; /* Default for smaller screens */
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
 }
 
 /* Hide Hamburger Icon for Laptop View */
